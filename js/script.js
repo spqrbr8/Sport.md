@@ -50,18 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
           video.classList.add('loaded');
       });
   }
-
-  // Scroll event for header
-  window.addEventListener('scroll', function() {
-      if (window.scrollY > 30) {
-          header.classList.add('scrolled');
-      } else {
-          header.classList.remove('scrolled');
-      }
-  });
-
   // Active nav links
-  const navLinks = document.querySelectorAll('.side-menu a');
+  const navLinks = document.querySelectorAll('.side-menu a, .desktop-nav a');
   const currentLocation = window.location.pathname;
   
   navLinks.forEach(link => {
