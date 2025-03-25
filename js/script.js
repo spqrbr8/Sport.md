@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.classList.add('dark-theme');
     toggle.checked = true;
   }
+  
 
   // Eveniment pentru schimbarea temei
   toggle.addEventListener('change', () => {
