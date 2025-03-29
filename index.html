@@ -1,82 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport.md</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon_io//favicon-16x16.png">
     <link rel="manifest" href="resources/favicon_io//site.webmanifest">
-    <title>Sport.md</title>
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="menu-logo-container">
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="menu-icon">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="close-icon" style="display: none;">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="logo">Sport.md</div>
+            </div>
 
-    <header>
-        <div class = "logo">
-            Sport.md
+            <div class="desktop-nav">
+                <nav>
+                    <a href="index.html" class="active">Acasă</a>
+                    <a href="pages/evenimente.html">Evenimente</a>
+                    <a href="pages/contacte.html">Contacte</a>
+                    <a href="pages/magazin.html">Magazin</a>
+                </nav>
+            </div>
+
+            <div class="theme-switch">
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
-        <label class="theme-switch">
-            <input type="checkbox" id="themeToggle">
-            <span class="slider"></span>
-        </label>
     </header>
 
     <div class="page-container">
-
-        <aside id="side-menu">
-            <a href="index.html">Acasă</a>
-            <a href="pages/evenimente.html">Evenimente</a>
-            <a href="pages/contacte.html">Contacte</a>
-            <a href="pages/magazin.html">Magazin</a>
+        <aside class="side-menu">
+            <nav>
+                <a href="index.html" class="active">Acasă</a>
+                <a href="pages/evenimente.html">Evenimente</a>
+                <a href="pages/contacte.html">Contacte</a>
+                <a href="pages/magazin.html">Magazin</a>
+            </nav>
         </aside>
 
+        <div class="backdrop"></div>
+
         <main>
-            <h2 class="title">Acasă</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius nisi accusantium ad similique natus earum
-                animi, tempora voluptatibus quia tempore ut quibusdam sint voluptas repellendus, incidunt saepe
-                dignissimos placeat velit.
-            </p>
-
-            <video class="intro-video" muted autoplay loop src="resources/intro.mp4"></video>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione debitis neque reprehenderit est
-                voluptatem architecto ipsum, sed at nihil! Blanditiis odit unde porro ratione! Est illum similique
-                minima vero!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione debitis neque reprehenderit est
-                voluptatem.
-            </p>
-
-            <div class="gallery">
-                <a target="_blank" href="images/gallery1.jpg">
-                   <img src="images/gallery1.jpg"> 
-                </a>
-                <a target="_blank" href="images/gallery2.jpg">
-                    <img src="images/gallery2.jpg"> 
-                 </a>
-                 <a target="_blank" href="images/gallery3.jpg">
-                    <img src="images/gallery3.jpg"> 
-                 </a>
-                 <a target="_blank" href="images/gallery4.jpg">
-                    <img src="images/gallery4.jpg"> 
-                 </a>
+            <div class="hero-section">
+                <div class="video-container">
+                    <video class="intro-video" muted autoplay loop>
+                        <source src="resources/intro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="overlay"></div>
+                </div>
+                <div class="hero-content">
+                    <h1>Sport.md</h1>
+                    <p class="hero-text">Pasiunea pentru mișcare și performanță</p>
+                </div>
             </div>
 
-            <div class="play-football">
-                <img src="images/ronaldo.png" id="ronaldo" alt="Ronaldo">
-                <img src="images/ball.png" id="ball" alt="Ball">
-                <img src="images/messi.png" id="messi" alt="Messi">
-            </div>
-            
+            <section class="content-section">
+                <h2 class="title">Acasă</h2>
+                <p class="intro-paragraph">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius nisi accusantium ad similique natus
+                    earum
+                    animi, tempora voluptatibus quia tempore ut quibusdam sint voluptas repellendus, incidunt saepe
+                    dignissimos placeat velit.
+                </p>
 
+                <p class="description-paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione debitis neque reprehenderit
+                    est
+                    voluptatem architecto ipsum, sed at nihil! Blanditiis odit unde porro ratione! Est illum similique
+                    minima vero!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ratione debitis neque reprehenderit
+                    est
+                    voluptatem.
+                </p>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="images/gallery1.jpg" alt="Sports Image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gallery2.jpg" alt="Sports Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gallery3.jpg" alt="Sports Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gallery4.jpg" alt="Sports Image 4">
+                    </div>
+                </div>
+            </section>
         </main>
-
     </div>
-<script src="js/script.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Sport.md</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
