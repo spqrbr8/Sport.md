@@ -1,9 +1,8 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .container img {
@@ -12,36 +11,52 @@
     transition: 0.2s;
 }
 
-.container img:hover {
-    transform: scale(1.1);
-}
-
 .card {
-    width: 300px;
+    width: auto;
+    height: auto;
     text-align: center;
-    background: white;
+    color: var(--header-foreground);
     border-bottom: 2px solid #F5F5F5;
     transition: .3s ease-in;
+    border: 2px solid #303030;
+    border-radius: 12px;
+    padding: 5px;
 }
 
 .card:hover {
-    border-bottom: 2px solid #fc5a5a;
+    box-shadow: 0 4px 8px #fc5a5a;
+    transform: translateY(-10px);
+    border-bottom: 5px solid #fc5a5a;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
+.card_images {
+    max-height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    padding: 1rem;
+}
+
+.card_images img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+
 }
 
 .card_info {
-    background: #fafafa;
-    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
 }
 
 .card_info h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
-    color: #444444;
+    color: var(--foreground);
     margin: 0 0 10px 0;
 }
 
@@ -53,21 +68,17 @@
 }
 
 .button {
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 12px;
-    background: #cd6713;
+    background-color: var(--accent);
     color: white;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 28px;
-    transition: .3s ease-in;
-}
-
-.card_info h3, .button, .price{
-    margin-left: 10px;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .button:hover {
-    background: #121928;
+    background-color: #e63c2e;
 }
