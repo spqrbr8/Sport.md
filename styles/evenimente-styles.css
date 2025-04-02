@@ -31,6 +31,11 @@
     overflow-y: scroll;
 }
 
+.event h4 {
+    text-align: center;
+    padding-top: 10px;
+}
+
 .dark-theme .event {
     background-color: #252525;
 }
