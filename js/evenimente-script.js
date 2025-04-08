@@ -1,4 +1,7 @@
 function loadResponsiveIframe() {
+
+  if (document.fullscreenElement) return;
+
     const container = document.getElementById('iframecontainer');
     
     // Verifică dacă lățimea ecranului este sub sau egal cu 700px
@@ -39,8 +42,12 @@ function loadResponsiveIframe() {
     }
   }
 
-  // Se apelează funcția la încărcarea paginii
-  window.addEventListener('load', loadResponsiveIframe);
 
-  // Se apelează funcția și la redimensionarea ferestrei pentru a actualiza iframe-ul dinamic
-  window.addEventListener('resize', loadResponsiveIframe);
+let resizeTimer;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(loadResponsiveIframe, 250);  // 250ms delay
+}); 
+
+// Se apelează funcția la încărcarea paginii
+  window.addEventListener('load', loadResponsiveIframe);
