@@ -50,6 +50,7 @@ function loadResponsiveIframe() {
   }
 }
 
+<<<<<<< HEAD
 let resizeTimer;
 window.addEventListener('resize', function() {
   clearTimeout(resizeTimer);
@@ -57,3 +58,10 @@ window.addEventListener('resize', function() {
 });
 
 window.addEventListener('load', loadResponsiveIframe);
+=======
+// Se apelează funcția la încărcarea paginii
+  window.addEventListener('load', loadResponsiveIframe);
+
+  // Se apelează funcția și la redimensionarea ferestrei pentru a actualiza iframe-ul dinamic
+  window.addEventListener('resize', loadResponsiveIframe);
+>>>>>>> 9010c2f55e0098295b12d34e4db9ba91bc5dd798
