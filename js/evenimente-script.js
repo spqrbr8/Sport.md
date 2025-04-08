@@ -43,11 +43,8 @@ function loadResponsiveIframe() {
   }
 
 
-let resizeTimer;
-window.addEventListener('resize', function() {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(loadResponsiveIframe, 250);  // 250ms delay
-}); 
-
 // Se apelează funcția la încărcarea paginii
   window.addEventListener('load', loadResponsiveIframe);
+
+  // Se apelează funcția și la redimensionarea ferestrei pentru a actualiza iframe-ul dinamic
+  window.addEventListener('resize', loadResponsiveIframe);
