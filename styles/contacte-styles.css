@@ -20,10 +20,6 @@
 .col-90 { width: 90%; }
 .col-100 { width: 100%; }
 
-.row-event {
-    margin-top: 20px;
-}
-
 .contact-list {
     line-height: 200%;
     list-style: linear-gradient(#ff533d, #ff533d);
